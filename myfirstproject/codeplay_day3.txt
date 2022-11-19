@@ -1,0 +1,27 @@
+LightSwitch 
+
+State 
+-  2 States 
+- ON 
+- OFF
+
+
+- Properties 
+id - unique identifier - int 
+ Handle  - handleState => Up/Down => Boolean True/False => 0, 100, integer
+ WireConnection - Connection Nodes - red, green, earthing
+ Amp(5/15/20Amp) - int 
+ MoutingBracket - String
+ Material  - String
+ ManufacturerInfo - String 
+ price - float 10.99
+
+
+- Functions 
+isStateTurnedON
+isStateTurnedOFF
+DimValueTo()
+
+
+git config --global core.autocrlf false
+git config --global core.longpaths true

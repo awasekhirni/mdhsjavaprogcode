@@ -1,0 +1,69 @@
+Scenario2 Day2:
+
+Imagine a company like amazon is planning a package of its products and it wants to create a logistic management software.
+It has different kinds of packages/card boxes, lightweight, heavy weight, distance to deliver by postcode. 
+customs duty based on the product purchased and the price. 
+
+Step1: Identify Nouns 
+company : Amazon 
+package : cardboard package 
+customer : client 
+
+step 2: characteristics or properties of the nouns 
+- reusable, simple, scalable, easy to maintain
+Amazon => generic class => Company 
+
+Company Properties Amazon-0001
+1. name eg: Amazon (String)
+2. registered address eg: California, USA (String)
+3. shipping warehouse address (String)
+4. companyId int/string 132798123738, AMZN000123187132 (String)
+
+Operation/Actions/Methods/Functions
+onSale
+Shipping
+onReturns
+
+A company can sell multiple products (Amazon sells multiple products)
+
+Product (Noun/Object)
+companyId (001) (integer)
+productId 1,2,3 integer
+ productCatalog 
+ productName (String)
+5. productdesc (String)
+6. productavailability int/quantity
+7. productprice floating 100.99 /99.99
+8. isProductOnSale  boolean  true/false
+9. productWeight floating 
+10.productDimension 100cmx200cm  string 
+
+
+
+Operations /functions/verbs
+1. packageProduct in a box and ship 
+2. testit 
+3. returnthepackage 
+
+
+Customer (Object)
+
+Characteristics/Properties 
+1.customerId => 01237831  => number / integer
+2.customerName =>(String) Mr. Eric Daviau/Mr.Mohammed // Mr.Casian Andor // Mr.jedi
+3.customerAddress => Andromeda (String)
+4.customerGender => Male, Female, Non-binary (String/Boolean) True/False
+5.customerPostalCode => L9T MTZ / 5200928 / 52T 56373 (Alphanumeric)=> String
+
+operations 
+acceptPackage
+returnPackage
+PayfortheSale
+AcceptDepositReturn of the Payment for return 
+
+Object Oriented Paradigm is built 4 pillars or gang of four / model reality/ mimic real experience
+1. Abstraction - A high level abstraction - hide details not too specific - when we make this more generic, we can reuse class template later on
+2. Encapsulation - hiding details,car - parked (public), your driveway (protect), garage(private) properties - public, private, protected by hiding details
+                 - package/parcel - drive parcel thrown(public), mailbox(protect), inside house(private) 
+3. Inheritance - Vehicle -> Car (expanding or extending the functionality)
+4. Polymorphism - poly(many)- morph(shapes) -> object can have exhibit many functionality/behaviour 

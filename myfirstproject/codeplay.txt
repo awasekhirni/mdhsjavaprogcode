@@ -1,0 +1,64 @@
+JAVA Programming language 
+
+Usecase Scenario 
+
+Problem:
+A cardealer is planning to build an autonomous self driving car. 
+He wants the car to managed autonomously and should be run on different fuel cell type - hydrogen, petrol, diesel
+
+
+java - high level programming language which uses class, objects, methods. it is built around some programming principles
+which we term as Object oriented programming paradigm. 
+
+Object Oriented Programming paradigm. 
+- it models/reflects/mimic reality. 
+- we are creating systems which mimic real-time behaviour and exhibit real-time state/ properties/characteristics
+
+Step 1: Identify the Nouns 
+=> Objects => Car, CarDealer 
+
+=> Properties (characteristics of the noun/object)  (machine readable)  DataType => Store Information 
+1. color  => red blue green yellow , rgb(0,0,0) => String 
+2. noOfWheels => 4,6,8 => integers
+3. noAxels => 1,2,4 => integers
+4. noOfSeating => 4,6,8 => integer
+5.fueltype => petrol, electric, hydrogen,diesel => String
+6. lefthandDrive/rightDrive => DriverSeatingArrangement  => left/right => false/true (boolean)
+7. driveType (automatic/stick) => true/false (boolean)
+8. parkingSensors => true/false
+9.bodyType (sedan/SUV/Truck/CargoVan) => string
+10.cruiseControlType => true/false, yes/no 
+11. engineStatus=> on/off, true/false 
+
+
+Java Datatypes => String, Integer, Float, Boolean, Unsigned, signedInteger 
+
+We have used the datatype => to mimic object state in real-time 
+Object-> have to record its state => characteristics/properties 
+=> we manage the state using methods/functions
+
+
+Actions/Methods/Functions
+1. start => state was off, => performed an operation => turn it ON 
+2. stop => state was ON => perform an operation/action/function => turn it OFF
+3. acclerate => 5km/hour =>  40km/hr (pressing the action to increase the speed)
+4. decelerate => 
+5. changeDirection (left,right, reverse, forward)
+6.Tow
+7.park 
+8. repaintCar,  red =>  mycar.set => blue
+
+
+Build a Specification of Car / Template => Class / Category /Classification
+1. Generic
+2. On-demand provision of properties to build an object(real-time instance)
+3. reusable 
+4. simple and less complicated
+
+
+
+
+
+
+
+
