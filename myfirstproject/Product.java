@@ -61,4 +61,8 @@ public class Product {
     }
     // setter methods
 
+    public void setIsProductOnSale(Boolean isProductOnSale) {
+        this.isProductOnSale = isProductOnSale;
+    }
+
 }

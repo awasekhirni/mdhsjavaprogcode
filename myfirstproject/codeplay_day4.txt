@@ -1,0 +1,20 @@
+# Banking Application 
+Scenario: I would like to create a bank account and deposit money and withdraw money from my bank account. 
+I would like to have two types accounts => Current Account => Salary from Company comes in 
+I would like to have a savings account for my saving for all other purposes. 
+
+BankAccount (Base/Parent Class)
+-CurrentAccount (Derived Classes/Child Class)
+-SavingsAccount (Derived Classes/Child Class)
+
+BankAccount 
+Properties 
+- name
+- accountNumber
+- accountBalance 
+
+State Operations/Functions 
+- deposit (done => taking input from terminal)
+- withdraw 
+- statement of my account 
+
