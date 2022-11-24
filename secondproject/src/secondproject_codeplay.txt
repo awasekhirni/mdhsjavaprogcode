@@ -1,0 +1,101 @@
+Day 5 Code play - Java Programming! 
+Encapsulation - Data Hiding / Scoping the variables, classes and methods 
+ - access modifiers 
+ - variables, classes, and methods/functions 
+ -public - which is everyone can have access to the variable,classes and functions 
+ -private - cannot be accessed
+ -protected - it has to be in the same package 
+
+ package -> a collection of classes grouped by functionality. 
+  Financial package 
+  - all the classes that are defined for financial processes. 
+
+
+Teacher 
+- public 
+    - name
+    - standard/grade teaches
+    - languages
+- private 
+    -age
+    -address
+    -salary
+
+
+teach
+evaluate
+supervision
+
+Why do we need encapsulation? 
+
+------------------
+Abstraction- Hiding details 
+- a high level overview, where you do not divulge details
+
+A vehicle - abstract concept 
+Abstraction in java can be achieved using two approaches 
+- abstract classes 
+- interface
+
+Why do we need abstraction?
+
+- customer - individual customer 
+           - smallbusiness 
+           - corporate 
+           - union 
+
+- abstract notion - customer 
+      - we extend or expand the features based on the requirement at a later stage 
+      - reducing the complexity of how we view things 
+      - reusability of code 
+      - avoid duplication 
+
+
+Vehicle (Abstract Notion) super class/ base class
+-shape
+-color
+-wheels
+-body
+-stearing wheel 
+-seats
+- we are not sure about providing concrete implementation of every method.
+
+Car(Extends the Abstract Notion Vehicle)
+- Sedan class
+- 4 wheels
+- body
+- stearing wheel
+- 4 people 
+
+
+Suv(extend the abstract notion vehicle)
+-SUV class
+-4 wheel
+- suv rugged body
+- stearing wheel 
+-7 people 
+
+--------------------------
+
+Shape(Abstract Class)
+-color
+-area
+-perimeter 
+
+
+Rectangle(extends Shape)
+-color
+-area - length, width 
+perimeter - length, width 
+
+Square (extend shape)
+-area - side 
+perimeter - side 
+
+Circle (extends shape)
+radius 
+area
+perimeter 
+
+
+
