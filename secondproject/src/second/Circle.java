@@ -10,7 +10,7 @@ public class Circle extends Shape {
     public Circle(String color, double cradius) {
         super(color);
         this.radius = cradius;
-        // TODO Auto-generated constructor stub
+
     }
 
     @Override

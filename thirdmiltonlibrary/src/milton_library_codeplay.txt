@@ -1,0 +1,29 @@
+
+Library- stores books-> checkedin and checkedout by users
+
+Book 
+- bookId- isbn
+- bookName 
+- author 
+-price
+-noOfCopies/quantity
+
+Transactions 
+- checkedin
+- checkedout 
+- list of books checkedout 
+- show all books 
+- search all books 
+
+CheckinOut
+ - user
+ - book- isbn
+ - booktitle - name 
+ - dateCheckedout 
+
+
+
+Library
+
+- a collection of books => store this information => Array, Lists, ArrayLists, dictionary (data structures)
+- catalog of checkedout books with due date 
