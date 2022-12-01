@@ -1,5 +1,6 @@
 package MiltonLibrary;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
@@ -70,24 +71,119 @@ public class Transactions {
 
     }
 
-    public void deleteBook() {
+    public void deleteBook(List<Book> allBooks) {
+        if (allBooks.size() == 0) {
+            System.out.println("-----------The Library Catalog is Empty------");
+
+        } else {
+            System.out.println("Please Enter the book to delete:");
+            Scanner scd = new Scanner(System.in);
+            String bName = scd.nextLine();
+            boolean bStatus = false;
+            for (Book bd : allBooks) {
+                if (bd.getBookName() == bName) {
+                    allBooks.remove(bd);
+                    bStatus = true;
+                    System.out.println("The Book is deleted!");
+                    break;
+                } else {
+                    System.out.println("The Book does not exist!");
+                }
+            }
+        }
+    }
+
+    // search a book in the library catalog
+    public void searchBookByName(List<Book> allBooks, String bookName) {
+        boolean isAvailable = false;
+        for (Book mybook : allBooks) {
+            if (mybook.getBookName().toLowerCase().equals(bookName.toLowerCase())) {
+                System.out.println("Book Details are:");
+                System.out.println("BookId:" + mybook.getBookId() + " " + "BookName:" + mybook.getBookName());
+                isAvailable = true;
+                break;
+            } else if (mybook.getBookName().toLowerCase().contains(bookName.toLowerCase())) {
+                System.out.println("Book Details are:");
+                System.out.println("BookId:" + mybook.getBookId() + " " + "BookName:" + mybook.getBookName());
+                isAvailable = true;
+                break;
+            } else {
+                isAvailable = false;
+                System.out.println("There is no book available with this name in the library catalog!");
+            }
+        }
+    }
+
+    // write the transaction to record who has checkedin a book or
+    // checkedout a book
+    public void isBookCheckedOut(List<CheckInOut> allCheckedoutBooks, List<Book> allBooks) {
+        // input checkout book
+        Scanner sco = new Scanner(System.in);
+        System.out.println("Please Enter the book that you want to checkout!");
+        String mybookName = sco.nextLine();
+        // who is the person who is borrowing the book
+        System.out.println("Please Enter UserName:!");
+        String myusername = sco.nextLine();
+
+        for (Book cb : allBooks) {
+            CheckInOut ciob = new CheckInOut();
+            if (cb.getBookName().toLowerCase().equals(mybookName.toLowerCase())) {
+                cb.setQuantity(cb.getQuantity() - 1);
+                ciob.setBookId(cb.getBookId());
+                ciob.setUserName(myusername);
+                ciob.setBookName(mybookName);
+                ciob.setDateBorrowed(new Date());
+            }
+            allCheckedoutBooks.add(ciob); // push
+        }
+        System.out.println("You have successfully borrowed a book!");
 
     }
 
-    searchBookByName(){
+    // statement of books checkout by users
+    public void showAllCheckedoutBooks(List<CheckInOut> allCheckedoutBooks) {
+        if (allCheckedoutBooks.size() == 0) {
+            System.out.println("There are no book issued to users!");
+        } else {
+            for (CheckInOut cio : allCheckedoutBooks) {
+                System.out.println("Here are the list of books borrowed!");
+                System.out.println("bookId:" + cio.getBookId() + " " + "userName:" + cio.getUserName() + "date:"
+                        + cio.getDateBorrowed() + "bookName:" + cio.getBookName());
+            }
+        }
 
     }
 
-    isBookCheckedOut(){
+    // returning the book
+    // deposit of the book to library catalog
+    public void checkInBook(List<CheckInOut> allCheckedoutBooks, List<Book> allBooks) {
+
+        Scanner sci = new Scanner(System.in);
+        System.out.println("Please enter the bookname to checkin to the catalog:");
+        String ibookName = sci.nextLine();
+        System.out.println("Enter the username:");
+        String iUserName = sci.nextLine();
+
+        for (CheckInOut cib : allCheckedoutBooks) {
+            if (cib.getBookName().toLowerCase().equals(ibookName.toLowerCase())
+                    && cib.getUserName().toLowerCase().equals(iUserName.toLowerCase())) {
+                for (Book issuedBook : allBooks) {
+                    if (cib.getBookName().toLowerCase().equals(ibookName.toLowerCase())) {
+                        issuedBook.setQuantity(issuedBook.getQuantity() + 1);
+                        allCheckedoutBooks.remove(cib);
+                    }
+                }
+
+            }
+        }
+        System.out.println(" The Book has been returned Successfully!");
 
     }
 
-    checkinBook(){
+    // update
+    // homework
+    public void UpdateBook(List<Book> allBooks) {
 
-    }
-
-    showAllCheckedoutBooks(){
-        
     }
 
 }
