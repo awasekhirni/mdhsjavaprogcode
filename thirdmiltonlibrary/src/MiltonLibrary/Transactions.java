@@ -182,7 +182,32 @@ public class Transactions {
 
     // update
     // homework
-    public void UpdateBook(List<Book> allBooks) {
+    public void updateBook(List<Book> allBooks) {
+        Scanner scu = new Scanner(System.in);
+        // fetch the bookid/bookname
+        System.out.println("Please Enter the Book you would like to update:");
+        String ubookName = scu.nextLine();
+        System.out.println("Please bookId:");
+        String ubid = scu.nextLine();
+        for (Book ub : allBooks) {
+            if (ub.getBookId().toLowerCase().equals(ubid.toLowerCase())
+                    && (ub.getBookName().toLowerCase().equals(ubookName.toLowerCase()))) {
+                System.out.println("Please enter the price");
+                int uprice = scu.nextInt();
+                System.out.println("Please enter the qty");
+                int uqty = scu.nextInt();
+                if (uprice != 0 && uqty != 0) {
+                    ub.setPrice(uprice);
+                    ub.setQuantity(uqty);
+
+                } else {
+                    System.out.println("Price and Qty values have not been provided");
+                }
+
+            } else {
+                System.out.println("We could not find the records you requested!");
+            }
+        }
 
     }
 
